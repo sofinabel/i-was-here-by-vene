@@ -20,6 +20,7 @@ export default {
   },
   methods: {
     async fetchDesc(regionName) {
+      console.log('test')
       const url = 'https://kgsearch.googleapis.com/v1/entities:search'
       const apiKey = 'AIzaSyAkCAi03tTo310SnRk06NT_NL8nI0Qehe4'
       this.desc = ''
