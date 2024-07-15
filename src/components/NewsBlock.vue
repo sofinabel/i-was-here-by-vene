@@ -7,9 +7,9 @@
         </li>
       </ul>
     </div>
-  </template>
+</template>
   
-  <script>
+<script>
   import axios from 'axios'
   
   export default {
@@ -22,7 +22,7 @@
     methods: {
       async fetchNews(region) {
         try {
-          const response = await axios.get(`https://newsapi.org/v2/everything?q=${region}&from=2024-06-03&sortBy=publishedAt&pageSize=2&apiKey=c299e08683d042b2a2e6739d31c0b489`)
+          const response = await axios.get(`https://newsapi.org/v2/everything?q=${region}&pageSize=2&apiKey=c299e08683d042b2a2e6739d31c0b489`)
           this.articles = response.data.articles
         } catch (error) {
           console.error('Error fetching news:', error)
